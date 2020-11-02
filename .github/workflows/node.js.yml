@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ developer ]
+    branches: [ main ]
   pull_request:
-    branches: [ developer ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -27,7 +27,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - name: Developer
+    - name: Deploy
       run: |
        git config --global user.name $U2017499
        git config --global user.email $u2017499@giki.edu.pk
