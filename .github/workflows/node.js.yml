@@ -29,8 +29,8 @@ jobs:
     - run: npm test
     - name: Developer
       run: |
-       git config --global user.name $user_name
-       git config --global user.email $user_email 
+       git config --global user.name $U2017499
+       git config --global user.email $u2017499@giki.edu.pk
        git remote set-url origin https://${github_token}@github.com/${repository}
        npm run deploy
       env:
